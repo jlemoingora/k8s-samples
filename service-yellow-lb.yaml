@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-lb-yellow
+spec:
+  selector:
+    app: yellow
+  ports:
+    - port: 5678
+  type: LoadBalancer

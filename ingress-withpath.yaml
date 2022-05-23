@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-withpath
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: myapp.100.70.246.193.nip.io
+    http:
+      paths:
+        - path: /yellow
+          backend:
+            serviceName: service-yellow
+            servicePort: 5678
+        - path: /blue
+          backend:
+            serviceName: service-blue
+            servicePort: 5678
+        - path: /green
+          backend:
+            serviceName: service-green
+            servicePort: 5678

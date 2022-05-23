@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-yellow
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: yellow.100.70.246.193.nip.io
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: service-yellow
+            servicePort: 5678

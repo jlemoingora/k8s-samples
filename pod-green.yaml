@@ -6,7 +6,7 @@ metadata:
     app: green
 spec:
   containers:
-    - name: pod1
+    - name: container1
       image: hashicorp/http-echo
       args:
         - "-text=green"
