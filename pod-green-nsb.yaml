@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod-green
+  namespace: nsb
+  labels:
+    app: green
+spec:
+  containers:
+    - name: pod1
+      image: hashicorp/http-echo
+      args:
+        - "-text=green in nsb"

@@ -1,0 +1,22 @@
+apiVersion: apps/v1 
+kind: ReplicaSet 
+metadata: 
+  name: replicaset-blue 
+  labels: 
+    app: blue 
+spec:
+  replicas: 3 
+  selector: 
+    matchLabels: 
+      app: blue 
+  template: 
+    metadata: 
+      labels: 
+        app: blue 
+    spec: 
+      containers: 
+      - name: container1 
+        image: hashicorp/http-echo
+        args:
+          - "-text=blue"
+

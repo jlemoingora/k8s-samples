@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod-blue
+  labels:
+    app: blue
+spec:
+  containers:
+    - name: pod1
+      image: hashicorp/http-echo
+      args:
+        - "-text=blue"

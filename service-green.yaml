@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-green
+spec:
+  selector:
+    app: green
+  ports:
+    - port: 5678
